@@ -1,16 +1,26 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <template>
   <img
     alt="Vue logo"
     src="./assets/logo.png"
+    :class="$style.logo"
   />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-link to="/">back!</router-link>
+  <router-link to="hello">hello!</router-link>
+  <router-view/>
 </template>
+
+<style module>
+.logo{
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+</style>
 
 <style>
 #app {
@@ -20,5 +30,10 @@ import HelloWorld from './components/HelloWorld.vue';
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  margin: 0 auto;
 }
 </style>
