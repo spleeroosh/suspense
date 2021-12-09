@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 
-defineProps<{ msg: string }>();
+const msg: string = 'Hello Vue 3 + TypeScript + Vite';
 
 const count = ref<number>(0);
 </script>
@@ -13,29 +13,32 @@ const count = ref<number>(0);
     Recommended IDE setup:
     <a
       href="https://code.visualstudio.com/"
+      :class="$style.link"
       target="_blank"
     >VSCode</a>
     +
     <a
       href="https://github.com/johnsoncodehk/volar"
+      :class="$style.link"
       target="_blank"
     >Volar</a>
   </p>
 
   <p>
     See
-    <code>README.md</code> for more information.
+    <code :class="$style.code">README.md</code> for more information.
   </p>
 
   <p>
     <a
-      :class="$style.a"
       href="https://vitejs.dev/guide/features.html"
+      :class="$style.link"
       target="_blank"
     >Vite Docs</a>
     |
     <a
       href="https://v3.vuejs.org/"
+      :class="$style.link"
       target="_blank"
     >Vue 3 Docs</a>
   </p>
@@ -52,7 +55,7 @@ const count = ref<number>(0);
 </template>
 
 <style module>
-.a {
+.link {
   color: #42b983;
 }
 
