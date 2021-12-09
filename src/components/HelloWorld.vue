@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import {ref} from 'vue';
 
 defineProps<{ msg: string }>();
 
@@ -46,7 +46,8 @@ const count = ref<number>(0);
   >count is: {{ count }}</button>
   <p>
     Edit
-    <code :class="$style.code">components/HelloWorld.vue</code> to test hot module replacement.
+    <code :class="$style.code">components/HelloWorld.vue</code>
+    to test hot module replacement.
   </p>
 </template>
 
